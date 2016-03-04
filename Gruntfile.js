@@ -77,6 +77,10 @@ module.exports = function(grunt) {
             css: [
                 '<%= appConfig.dist %>/css',
                 '<%= appConfig.build %>/css'
+            ],
+            min: [
+                '<%= appConfig.dist %>/js',
+                '<%= appConfig.dist %>/templates'
             ]
         },
 
@@ -119,6 +123,17 @@ module.exports = function(grunt) {
                     dest: '<%= appConfig.dist %>/js',
                     src: [
                         '**/*.js'
+                    ],
+                    filter: 'isFile'
+                }]
+            },
+            tmpl: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= appConfig.public %>/templates',
+                    dest: '<%= appConfig.dist %>/templates',
+                    src: [
+                        '**/*.html'
                     ],
                     filter: 'isFile'
                 }]
@@ -256,6 +271,21 @@ module.exports = function(grunt) {
         'copy:js',
         'imagemin',
         'htmlclean',
+        'concurrent:dev'
+    ]);
+
+    // makes a copy of the project where all files are only minified
+    grunt.registerTask('buildmin', [
+        'clean:min',
+        //'jshint:all',
+        //'less:transpile',
+        //'cssmin',
+        //'uglify',
+        //'copy:all',
+        'copy:js',
+        'copy:tmpl',
+        //'imagemin',
+        //'htmlclean',
         'concurrent:dev'
     ]);
 
