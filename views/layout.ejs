@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" type="text/css" href="/css/mywebstart.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <script data-main="./js/main.js" src="./js/lib/require-2.1.20.js"></script>
 <!-- <script src="/req/mywebstart.js"></script> -->
 <body>
+
+<!-- HEADER -->
 <div id="header" class="w3-container w3-top w3-purple">
 
     <div>
@@ -22,7 +26,7 @@
 
     <div style="position: absolute; bottom: 0;">
         <ul class="w3-navbar w3-large">
-            <li onmouseenter="w3_open()"><a class="w3-opennav w3-hover-red">☰</a></li>
+            <li onmouseenter="w3_open()"><a class="w3-opennav w3-hover-pale-red">☰</a></li>
             <li><a href="#" class="w3-hover-yellow">Portfolio</a></li>
             <li><a href="#" class="w3-hover-orange">Home</a></li>
             <li><a href="#" class="w3-hover-blue">About</a></li>
@@ -32,12 +36,15 @@
     </div>
 
 </div>
+<!-- end of Header -->
 
-
+<!-- MAIN -->
 <div class="w3-center">
     <div class="w3-row">
 
-        <div class="w3-col m2">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="w3-col m2 l2">
 
             <nav class="w3-sidenav w3-light-grey w3-animate-left w3-closenav"
                  onmouseleave="w3_close()" style="display:none">
@@ -50,40 +57,267 @@
             </nav>
 
         </div>
+        <!-- END of Left Sidebar -->
 
-        <div class="w3-col m8 w3-container">
-            <h1>Welcome</h1>
-            <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
+
+        <!-- CENTER CONTAINER -->
+        <div class="w3-col m8 l8">
+
+            <h1 class="hTitle">Итак,</h1>
+
+            <div class="w3-section w3-justify">
+                меня зовут Петр, в этом (2016) году мне исполнилось 40 лет. Полтора года назад я начал с нуля изучать
+                веб программирование, после чего прошел 3-часовое
+                собеседование (15 минут с HR-ом, 2 с половиной часа с двумя техническими специалистами, ну и 15 минут
+                с менеджером, после чего получил приглашение на работу в качестве Front-end Developer в
+                <a class="w3-pale-blue w3-btn" href="https://www.scnsoft.com" target="_blank">этой</a> компании.
+            </div>
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow w3-padding-large
+            w3-margin-24">
+                <p><i>Чтобы изучить web программирование, не обязательно учиться в институте.
+                    Всё есть в интернете. Абсолютно всё.</i>
+                </p>
+            </div>
+
+            <div class="w3-section w3-justify">
+                За эти полтора года я основательно освоил такие технологии, как HTML, CSS, JavaScript,
+                BackboneJS, RequireJS, Underscore, NodeJS, Express, MongoDB, Mongoose, Grunt, Less, Jade, Git.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Если кратко, то это Full-stack, то есть за полтора года я научился делать верстку и на чистом JavaScript,
+                а так же с помощью фреймворка BackboneJS, RequireJS и шаблонизаторов, программировать Front-end,
+                писать под него свой NodeJS сервер и сохранять данные в свою базу данных MongoDB.
+            </div>
+
+            <div class="w3-section w3-justify">
+                В моем случае быстрому изучению способствовали:
+            </div>
+
+            <div class="w3-accordion w3-light-grey w3-margin-12">
+                <button onclick="show(this)" class="w3-btn-block w3-white w3-left-align">
+                    Отличный английский   <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-accordion-content w3-container w3-justify w3-padding">
+                    <p>На начальной стадии изучения программирования, русскоязычного материала еще более-менее хватает, но для
+                        практического профессионального применения полученных навыков английский нужен как воздух.
+                        Потому что чем дальше, тем меньше русский язык будет присутствовать в вашей работе, и
+                        когда вам скажут привязать ваше API к стороннему API, скорее всего
+                        документация будет написана тоже на английском.</p>
+                </div>
+
+                <button onclick="show(this)" class="w3-btn-block w3-white w3-left-align">
+                    Привычка учиться   <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-accordion-content w3-container w3-justify w3-padding">
+                    <p>Последние 10 лет я только и делаю, что что-то изучаю и применяю, так что
+                    к изучению огромного объема нового материала мне было не привыкать.</p>
+                </div>
+
+                <button onclick="show(this)" class="w3-btn-block w3-white w3-left-align">
+                    Время   <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-accordion-content w3-container w3-justify w3-padding">
+                    <p>Я уделял этому ВСЁ свое свободное время. Ночь длинная, как говорят в армии.</p>
+                </div>
+
+                <button onclick="show(this)" class="w3-btn-block w3-white w3-left-align">
+                    Сильная мотивация   <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-accordion-content w3-container w3-justify">
+                    <p>Тут все понятно.</p>
+                </div>
+
+                <button onclick="show(this)" class="w3-btn-block w3-white w3-left-align">
+                    Супервайзинг со стороны опытного программиста   <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="w3-accordion-content w3-container w3-justify w3-padding">
+                    <p>Благодаря подсказкам опытных программистов я шел коротким путем и изучал только то,
+                        что надо, что в тренде, что используется в крупных аутсорсинговых компаниях.
+                        Благодаря тому же самому, я параллельно осваивал методологию командной работы
+                        в IT компаниях, потому что изучить язык и фреймворки - это одно, а
+                        знать внутренние процессы разработки - другое и тоже очень важное.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
+            w3-padding-large w3-margin-24">
+                <p><i>Без хорошего английского сильным профессионалом в Web программировании
+                    тебе, к сожалению, не стать.</i>
+                </p>
+            </div>
+
+
+
+            <h1 class="hTitle">Проведу моим путем</h1>
+
+            <div class="w3-section w3-justify">
+                Как я для себя понял, в моей стране стать программистом можно 2 способами.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Первый - стандартный: поступить на профильный факультет, с 3 - 5 курса попасть на так называемую
+                "ферму" или "лабораторию", и там уж как себя зарекомендуешь. Этот способ прост тем, что самое
+                сложное - это поступить в ВУЗ на профильный факультет. А там шаблонно, потихоньку или
+                насколько хватает амбициозности и способностей что-то изучать. Но что если поступить не повезло?
+            </div>
+
+            <div class="w3-section w3-justify">
+                Тогда придется идти моим путем и изучать все самому. И здесь повляются вопросы. Что именно изучать? Как изучать?
+                Что с этим делать дальше? Этот путь сложен тем, что для трудоустройства надо обладать
+                хорошими навыками, причем чем больше спектр знаний, тем лучше. Другими словами, надо придти на собеседование
+                со знаниями сильного senior developer, чтоб пробоваться на позицию junior. Меня взяли только лишь потому,
+                что я знал и Front-end, и Back-end, и базу данных, и верстку. Плюс английский. Плюс портфолио...
+            </div>
+
+            <div class="w3-section w3-justify">
+                Большинство отказов приходит еще на стадии рассмотрения резюме. Им всем нужен опыт коммерческой
+                разработки, именно комерческой. В крайнем случае должно быть хорошее портфолио своих наработок.
+            </div>
+
+            <div class="w3-section w3-justify">
+                В общем, когда ты не внутри, то здесь все сложно. Что учить надо, а что уже не стоит?
+                Как и где получить то, что надо учить?
+                Как правильно составить резюме и подать себя?
+                Что спрашивают на собеседовании? Какие технические
+                знания проверяют? Каким должен быть код в портфолио, чтоб его приняли?
+                Каким должно быть это портфолио? Где, блин, получить этот треклятый опыт коммерческой разработки?
+                Чем коммерческая разработка отличается от некомерческой? Что еще надо знать и уметь делать
+                помимо написания кода в редакторе, даже если ты оказался гением, чтоб тебя заметили и согласились на
+                интервью?
+            </div>
+
+            <div class="w3-section w3-justify">
+                Я прошел через все это, в возрасте 40 лет. Мне потребовалось полтора года. И я готов провести вас
+                моим путем.
+            </div>
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
+            w3-padding-large w3-margin-24">
+                <p><i>Я готовлю не любителей, которые хотят попробовать что-то там поверстать,
+                    а специалистов, конечная цель которых - трудоустроиться в IT компанию.</i>
+                </p>
+            </div>
+
+
+
+            <h1 class="hTitle">Что я предлагаю</h1>
+
+            <div class="w3-section w3-justify">
+                Я не буду читать вам лекции, как на курсах. Правда, я не был на курсах, но думаю, что знаю, как там все проходит.
+                Я буду обеспечивать вас материалом, который надо будет освоить. Позже это уже будут просто ссылки в интернете,
+                а еще позже - просто постановка задачи, которую вам надо будет решить самостоятельно. Найти
+                материал по теме и реализовать эту задачу в виде проекта или его части.
+            </div>
+
+            <div class="w3-section w3-justify">
+                У вас будет час в неделю, чтоб в скайп сессии или при личной встрече задать вопросы, если вы что-то не будете понимать.
+                Это могут быть любые технические вопросы по теме, но только лишь для того, чтоб разрулить какой-нибудь
+                очередной затык. Осваивать материал вам придется самостоятельно. Сколько у вас уйдет на это времени -
+                будет зависеть только от вас.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Итак, еще раз. Схема такая: я даю вам материал, вы неделю осваиваете его, читаете,
+                роете интернет, форумы, делаете, сколько уж успеете,
+                потом час сессии, где я объясняю, если чего не будете понимать.
+            </div>
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
+            w3-padding-large w3-margin-24">
+                <p><i>Если программирование станет вашей профессией, то интернет блоги, форумы, документация,
+                    статьи, учебники станут вашим домом, где вы будете постоянно пропадать.
+                    И искать там ответы на вопросы вы будете самостоятельно. Так что лучше привыкать сразу.</i>
+                </p>
+            </div>
+
+            <div class="w3-section w3-justify">
+                Помимо раздачи материала и проведения часовой сессии в неделю, я буду проверять ваши коды. Я
+                буду говорить, что не так в вашем коде, какими инструментами разработки обязательно надо овладеть.
+                Я выложу ваш проект в интернет. Если надо будет, я напишу сервер к вашему проекту.
+                Как только это будет возможно, я буду внедрять в обучение процессы
+                комерческой разработки. В общем, нашей задачей будет пройти все этапы коммерческой разработки и
+                на выходе получить готовый проект.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Я буду ставить вам задачи, с которыми сталкивался или буду сталкиваться в своих реальных боевых
+                проектах, и смотреть, как вы с этим справляетесь: сроки, качество кода, решения... Если вы дойдете до этого,
+                то в какой-то момент вы вдруг скажете себе: Я уже могу пробоваться на позицию junior front-end developer.
+            </div>
+
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
+            w3-padding-large w3-margin-24">
+                <p><i>Все работодатели хотят от соискателей опыт коммерческой разработки. Вот только где его взять?</i>
+                </p>
+            </div>
+
+
+            <div class="w3-section w3-justify">
+                Если у вас будет все получаться, я постараюсь дать вам этот опыт. Я не буду этого обещать, но
+                я знаю, как это важно. Собственно, если вы будете что-то писать и это будет действительно качественный код,
+                то в какой-то момент вы поймете, что готовы.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Я подготовлю вас к собеседованию. Помогу грамотно составить резюме, раскажу, что и как, к чему надо быть готовым,
+                как готовиться. Но что более важно, я сам буду собеседовать вас до тех пор, пока и вы,
+                и я не почувствуем, что вы все знаете.
+            </div>
+
+
         </div>
-        <div class="w3-col m2 w3-padding">
-            <div class="w3-card-8 w3-padding">
-                <p>ADS</p>
+        <!-- END of Center Container -->
+
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="w3-col m2 l2 w3-padding">
+            <div class="w3-card-8 w3-padding w3-sand">
+                <p>Разместите здесь свою рекламу.</p>
             </div><br>
-            <div class="w3-card-8 w3-padding">
-                <p>ADS</p>
+            <div class="w3-card-8 w3-padding w3-sand">
+                <p>Разместите здесь свою рекламу.</p>
             </div>
         </div>
+        <!-- END of Right Sidebar -->
+
+
     </div>
+
+
 </div>
+<!-- end of Main -->
 
-<footer class="w3-container w3-purple">
-    <h5>Footer</h5>
-    <p>Footer information goes here</p>
-</footer>
+<!-- FOOTER -->
+<div id="footer" class="w3-container w3-purple">
 
+    <div>
+        Footer
+    </div>
+
+
+</div>
+<!-- end of Footer -->
 
 
 <script>
+
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
         return false;
     }
+
     function w3_close() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
     }
+
+    function show(el) {
+        $(el).next().toggle();
+    }
+
 </script>
 
 

@@ -65,6 +65,7 @@
 }
 
 @headerHeight: 160px;
+@footerHeight: 100px;
 
 * {
   margin: 0;
@@ -72,37 +73,65 @@
   box-sizing: border-box;
 }
 
+body {
+  & #header {
+    height: @headerHeight;
 
-#header {
-  height: @headerHeight;
+    & #logo {
+      width: 100px;
+      margin: 5px;
+    }
 
-  & #logo {
-    width: 100px;
-    margin: 5px;
+    & #title {
+      position: absolute;
+      top: 20px;
+
+    }
+
+    #title span {
+      padding: 5px;
+    }
+
   }
 
-  & #title {
-    position: absolute;
-    top: 20px;
 
+  & .w3-center {
+    margin-top: @headerHeight;
   }
 
-  #title span {
-    padding: 5px;
+  & #footer {
+    height: @footerHeight;
+    clear: both;
   }
 
 }
 
+// without any height the floating row block will not be displayed
+.w3-row {
+  height: 10px;
+}
 
 
+/* Set a 100% height to left and right col */
+.w3-col.m2 {height: 100%;}
 
-.w3-center {
-  margin-top: @headerHeight;
+/* On small screens, set grid height to 'auto' */
+@media screen and (max-width: 601px) {
+  .w3-row {height:auto;}
 }
 
 .w3-tangerine {
   font-family: "Tangerine", serif;
 }
+
+.w3-lobster {
+  font-family: "Lobster", serif;
+}
+
+.hTitle {
+  .w3-lobster;
+}
+
 
 /* login page styles */
 
@@ -171,16 +200,3 @@
   color: @darkRed;
 }
 
-
-// W3CSS styles
-
-/* Set the height of the grid so that left and right col can be 100% (adjust as needed) */
-.w3-row {height: 500px}
-
-/* Set a 100% height to left and right col */
-.w3-col.m2, w3-col.m2 {height: 100%;}
-
-/* On small screens, set grid height to 'auto' */
-@media screen and (max-width: 601px) {
-  .w3-row {height:auto;}
-}
