@@ -65,7 +65,7 @@
 }
 
 @headerHeight: 160px;
-@footerHeight: 100px;
+@footerHeight: 30px;
 
 * {
   margin: 0;
@@ -75,7 +75,7 @@
 
 body {
   & #header {
-    height: @headerHeight;
+    position: relative;
 
     & #logo {
       width: 100px;
@@ -83,31 +83,43 @@ body {
     }
 
     & #title {
-      position: absolute;
-      top: 20px;
+      text-align: center;
 
+      & #title-container>span {
+        padding: 5px;
+      }
     }
 
-    #title span {
-      padding: 5px;
+  }
+
+  & #menubar {
+    position: fixed;
+    left: 70px;
+    top: 15px;
+    & a {
+      display: block;
+      height: 80px;
+      width: 80px;
     }
 
   }
 
 
   & .w3-center {
-    margin-top: @headerHeight;
+   clear: both;
+
   }
 
   & #footer {
     height: @footerHeight;
     clear: both;
+    margin-top: 50px;
   }
 
 }
 
 // without any height the floating row block will not be displayed
-.w3-row {
+#sidenav {
   height: 10px;
 }
 

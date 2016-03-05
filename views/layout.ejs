@@ -13,30 +13,30 @@
 <body>
 
 <!-- HEADER -->
-<div id="header" class="w3-container w3-top w3-purple">
+<div id="header" class="w3-container w3-teal w3-row">
 
-    <div>
-        <span><img id="logo" class="w3-circle w3-card-4" src="./assets/img/peter.jpg" alt="avatar"></span>
-        <span id="title" class="w3-jumbo w3-tangerine w3-wide w3-display-middle">
+    <div id="menubar" class="w3-col m1 l1">
+        <span onmouseenter="w3_open()"><a class="w3-opennav w3-purple w3-xxxlarge
+        w3-badge w3-card-4">☰</a></span>
+    </div>
+
+    <div id="title" class="w3-col m10 l10">
+        <span id="title-container" class="w3-jumbo w3-tangerine w3-wide w3-card-16">
             <span class="w3-blue">My </span>
             <span class="w3-yellow"> Web </span>
             <span class="w3-green">Start</span>
         </span>
     </div>
 
-    <div style="position: absolute; bottom: 0;">
-        <ul class="w3-navbar w3-large">
-            <li onmouseenter="w3_open()"><a class="w3-opennav w3-hover-pale-red">☰</a></li>
-            <li><a href="#" class="w3-hover-yellow">Portfolio</a></li>
-            <li><a href="#" class="w3-hover-orange">Home</a></li>
-            <li><a href="#" class="w3-hover-blue">About</a></li>
-            <li><a href="#" class="w3-hover-aqua">Gallery</a></li>
-            <li><a href="#" class="w3-hover-green">Contact</a></li>
-        </ul>
+    <div class="w3-col m1 l1">
+        <span><img id="logo" class="w3-circle w3-card-4" src="./assets/img/peter.jpg" alt="avatar"></span>
     </div>
+
 
 </div>
 <!-- end of Header -->
+
+<span style="clear:both"></span>
 
 <!-- MAIN -->
 <div class="w3-center">
@@ -44,7 +44,7 @@
 
 
         <!-- LEFT SIDEBAR -->
-        <div class="w3-col m2 l2">
+        <div id="sidenav" class=" w3-col m2 l2">
 
             <nav class="w3-sidenav w3-light-grey w3-animate-left w3-closenav"
                  onmouseleave="w3_close()" style="display:none">
@@ -61,13 +61,13 @@
 
 
         <!-- CENTER CONTAINER -->
-        <div class="w3-col m8 l8">
+        <div class="w3-col m9 l9">
 
             <h1 class="hTitle">Итак,</h1>
 
             <div class="w3-section w3-justify">
                 меня зовут Петр, в этом (2016) году мне исполнилось 40 лет. Полтора года назад я начал с нуля изучать
-                веб программирование, после чего прошел 3-часовое
+                веб программирование. Недавно я прошел 3-часовое
                 собеседование (15 минут с HR-ом, 2 с половиной часа с двумя техническими специалистами, ну и 15 минут
                 с менеджером, после чего получил приглашение на работу в качестве Front-end Developer в
                 <a class="w3-pale-blue w3-btn" href="https://www.scnsoft.com" target="_blank">этой</a> компании.
@@ -82,7 +82,8 @@
 
             <div class="w3-section w3-justify">
                 За эти полтора года я основательно освоил такие технологии, как HTML, CSS, JavaScript,
-                BackboneJS, RequireJS, Underscore, NodeJS, Express, MongoDB, Mongoose, Grunt, Less, Jade, Git.
+                BackboneJS, RequireJS, Underscore, NodeJS, Express, MongoDB, Mongoose, Grunt, Less, Jade, Bootstrap,
+                Git.
             </div>
 
             <div class="w3-section w3-justify">
@@ -213,14 +214,14 @@
             </div>
 
             <div class="w3-section w3-justify">
-                У вас будет час в неделю, чтоб в скайп сессии или при личной встрече задать вопросы, если вы что-то не будете понимать.
+                У вас будет час в неделю, чтоб в скайп сессии или при личной встрече задать вопросы, если Вы чего-то не будете понимать.
                 Это могут быть любые технические вопросы по теме, но только лишь для того, чтоб разрулить какой-нибудь
                 очередной затык. Осваивать материал вам придется самостоятельно. Сколько у вас уйдет на это времени -
                 будет зависеть только от вас.
             </div>
 
             <div class="w3-section w3-justify">
-                Итак, еще раз. Схема такая: я даю вам материал, вы неделю осваиваете его, читаете,
+                Итак, еще раз. Схема такая: я даю вам материал, Вы неделю осваиваете его, читаете,
                 роете интернет, форумы, делаете, сколько уж успеете,
                 потом час сессии, где я объясняю, если чего не будете понимать.
             </div>
@@ -228,8 +229,8 @@
             <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
             w3-padding-large w3-margin-24">
                 <p><i>Если программирование станет вашей профессией, то интернет блоги, форумы, документация,
-                    статьи, учебники станут вашим домом, где вы будете постоянно пропадать.
-                    И искать там ответы на вопросы вы будете самостоятельно. Так что лучше привыкать сразу.</i>
+                    статьи, учебники станут вашим домом, где Вы будете постоянно пропадать.
+                    И искать там ответы на вопросы Вы будете самостоятельно. Так что лучше привыкать сразу.</i>
                 </p>
             </div>
 
@@ -244,8 +245,8 @@
 
             <div class="w3-section w3-justify">
                 Я буду ставить вам задачи, с которыми сталкивался или буду сталкиваться в своих реальных боевых
-                проектах, и смотреть, как вы с этим справляетесь: сроки, качество кода, решения... Если вы дойдете до этого,
-                то в какой-то момент вы вдруг скажете себе: Я уже могу пробоваться на позицию junior front-end developer.
+                проектах, и смотреть, как Вы с этим справляетесь: сроки, качество кода, решения... Если Вы дойдете до этого,
+                то в какой-то момент Вы вдруг скажете себе: Я уже могу пробоваться на позицию junior front-end developer.
             </div>
 
 
@@ -258,14 +259,138 @@
 
             <div class="w3-section w3-justify">
                 Если у вас будет все получаться, я постараюсь дать вам этот опыт. Я не буду этого обещать, но
-                я знаю, как это важно. Собственно, если вы будете что-то писать и это будет действительно качественный код,
-                то в какой-то момент вы поймете, что готовы.
+                я знаю, как это важно. Собственно, если Вы будете что-то писать и это будет действительно качественный код,
+                то в какой-то момент Вы поймете, что готовы.
             </div>
 
             <div class="w3-section w3-justify">
                 Я подготовлю вас к собеседованию. Помогу грамотно составить резюме, раскажу, что и как, к чему надо быть готовым,
-                как готовиться. Но что более важно, я сам буду собеседовать вас до тех пор, пока и вы,
-                и я не почувствуем, что вы все знаете.
+                как готовиться. Но что более важно, я сам буду собеседовать вас до тех пор, пока не увижу, что можно пробовать.
+            </div>
+
+            <div class="w3-section w3-justify">
+                Я помогу вам избежать моих ошибок. Несмотря на то, что что-то очень важное мне подсказывал
+                практикующий программист, в силу своей занятсти он не мог плотно опекать меня, и до многих вещей мне
+                приходилось доходить самому, чаще, постфактум, упуская одну реальную возможность за другой.
+                Я поделюсь с вами своим опытом.
+            </div>
+
+
+
+
+            <h1 class="hTitle">План действий</h1>
+
+            <div class="w3-section w3-justify">
+                Я могу разбить полтора года своего пути в Web программирование на следующие этапы (блоки):
+            </div>
+
+            <ul class="w3-section w3-justify">
+                <li>3 месяца у меня ушло на изучение HTML / CSS и тренировочную верстку.</li>
+                <br />
+                <li>6 месяцев на освоение чистого JavaScript.</li>
+                <br />
+                <li>2 месяца ушло на BackboneJS.</li>
+                <br />
+                <li>1 месяц на RequireJS.</li>
+                <br />
+                <li>1 месяц на препроцессоры: Grunt, Less, SASS, Jade, Bootstrap.</li>
+                <br />
+                <li>2 месяца на изучение целого Back-end блока, после чего у меня появился свои сервер и база данных:
+                NodeJS, Express, MongoDB, Mongoose и кое что по мелочам.</li>
+                <br />
+                <li>еще месяца 2 я дописывал свое Single-page приложение, прикручивая к нему всякие Back-end фичи,
+                как то авторизацию, пароли, улучшая безопасность приложения, коммутируя его со всякими сторонними ресурсами...</li>
+            </ul>
+
+            <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
+            w3-padding-large w3-margin-24">
+                <p><i>Свое первое приложение я начал писать через 1 неделю после начала изучения JavaScript.
+                    Потом по мере изучения я несколько раз его переписывал. Собственно, это приложение и нашло мне работу.</i>
+                </p>
+            </div>
+
+            <div class="w3-section w3-justify">
+                Таким образом, схема такая:
+            </div>
+
+            <div class="w3-section w3-justify">
+                Вы платите за 3 месяца вперед (ознакомьтесь с правилами). По факту оплаты я обеспечиваю вас тем
+                самым материалом, с которым за 3 месяца освоил HTML / CSS, то есть статичную верстку (узнайте, сколько это
+                стоит в вашем городе). Вы изучаете, верстаете. Один час в неделю я отвечаю на ваши вопросы, вне
+                этого часа смотрю ваши коды, даю задания для реализации, комментирую ошибки...
+            </div>
+
+            <div class="w3-section w3-justify">
+                Эти 3 месяца помогут оценить дальнейшие перспективы. На выходе Вы должны уметь верстать статичные сайты
+                и находить в сети решение возникающих проблем.
+            </div>
+
+
+            <div class="w3-section w3-justify">
+                Если у вас все получается и Вы готовы продолжать, переходим к JavaScript.
+            </div>
+
+
+
+            <h1 class="hTitle">Стоимость и условия</h1>
+
+            <ul class="w3-section w3-justify">
+                <li>Оплата - 100 долларов в месяц.</li>
+                <br />
+                <li>Оплата за 3 месяца вперед (плановое освоение цельного блока материала или группы тесно связанных блоков).</li>
+                <br />
+                <li>В случае Вашей неявки на сессию в установленное по взаимному согласию время,
+                сессия считается проведенной.
+                <br />
+                    Исключение - болезнь (необходимо прислать скан/фото больничного или справки с подтверждающими
+                идентификационными документами - скан паспорта или водительского удостоверения) или государственный праздник.</li>
+            </ul>
+
+
+            <h1 class="hTitle">Напишите мне</h1>
+
+            <div class="w3-section w3-justify">
+                Если Вы все обдумали и готовы начать, свяжитесь со мной, отправив сообщение через форму ниже:
+            </div>
+
+            <div class="w3-card-8 w3-margin">
+
+                <div class="w3-container w3-teal">
+                    <h2>Форма для связи</h2>
+                </div>
+
+                <form class="w3-container">
+
+                    <p>
+                        <input class="w3-input" type="text" required>
+                        <label class="w3-label w3-validate">Ваше имя</label></p>
+
+                    <p>
+                        <input class="w3-input" type="email" required>
+                        <label class="w3-label w3-validate">Ваш контактный email</label></p>
+
+                    <p>
+                        <input class="w3-input" type="text" required>
+                        <label class="w3-label w3-validate">Ваш скайп и/или телефон</label></p>
+
+                    <p>
+                        <input class="w3-input" type="text" required>
+                        <label class="w3-label w3-validate">Ваш город и страна</label></p>
+
+                    <p>
+                        <input class="w3-input" type="text" required>
+                        <label class="w3-label w3-validate">Ваша страница в социальных сетях</label></p>
+
+                    <p>
+                        <input class="w3-input" type="textarea" required>
+                        <label class="w3-label w3-validate">Текст Вашего сообщения</label></p>
+
+                    <p>
+                        <input class="w3-input" type="submit">
+                        </p>
+
+                </form>
+
             </div>
 
 
@@ -274,13 +399,16 @@
 
 
         <!-- RIGHT SIDEBAR -->
-        <div class="w3-col m2 l2 w3-padding">
+
+        <div class="w3-col m1 l1 w3-padding">
+            <!--
             <div class="w3-card-8 w3-padding w3-sand">
                 <p>Разместите здесь свою рекламу.</p>
             </div><br>
             <div class="w3-card-8 w3-padding w3-sand">
                 <p>Разместите здесь свою рекламу.</p>
             </div>
+            -->
         </div>
         <!-- END of Right Sidebar -->
 
@@ -292,13 +420,7 @@
 <!-- end of Main -->
 
 <!-- FOOTER -->
-<div id="footer" class="w3-container w3-purple">
-
-    <div>
-        Footer
-    </div>
-
-
+<div id="footer" class="w3-container w3-teal">
 </div>
 <!-- end of Footer -->
 
@@ -307,6 +429,7 @@
 
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+        document.getElementsByClassName("w3-sidenav")[0].style.opacity = "1.0";
         return false;
     }
 
