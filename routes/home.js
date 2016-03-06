@@ -25,7 +25,6 @@ exports.post = function(req, res) {
     var email = req.body.email;
     var skype = req.body.skype;
     var city = req.body.city;
-    var www = req.body.www;
     var text = req.body.text;
 
     var nodemailerMailgun = nodemailer.createTransport(mg(auth));
@@ -36,7 +35,7 @@ exports.post = function(req, res) {
         to: 'peter_babukh@mail.ru',
         subject: 'Letter from MyWebStart',
         html: '<div>' + name + '</div><div>' + email + '</div><div>' + skype +
-        '</div><div>' + city + '</div><div>' + www + '</div><div>' + text + '</div>'
+        '</div><div>' + city + '</div><div>' + text + '</div>'
 
     }, function (err) {
         if (err) return next(err);
