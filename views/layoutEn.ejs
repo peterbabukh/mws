@@ -18,27 +18,28 @@
 <!-- HEADER -->
 <div id="header" class="w3-container w3-teal w3-row">
 
-    <div id="menubar" class="w3-col m1 l1">
-        <span onmouseenter="w3_open()"><a class="w3-opennav w3-purple w3-xxxlarge
-        w3-badge w3-card-4"><i class="fa fa-bars"></i></a></span>
+    <div class="w3-col m1">
+        <span><img id="logo" class="w3-circle w3-card-4" src="./assets/img/peter.jpg" alt="avatar"></span>
     </div>
 
-    <div id="title" class="w3-col m10 l10">
+
+    <div id="title" class="w3-col m11">
         <span id="title-container" class="w3-jumbo w3-tangerine w3-wide w3-card-16">
             <span class="w3-blue">My </span>
             <span class="w3-yellow"> Web </span>
             <span class="w3-green">Start</span>
         </span>
+
+        <div id="lang-nav" class="">
+            <a href="/" class="w3-blue w3-large w3-tag w3-card-4">ru</a>
+            <a href="/en" class="w3-yellow w3-large w3-tag w3-card-4">en</a>
+        </div>
+
     </div>
 
-
-    <div  id="logo-container" class="w3-col m1 l1">
-        <span><img id="logo" class="w3-circle w3-card-4" src="./assets/img/peter.jpg" alt="avatar"></span>
-    </div>
-
-    <div id="lang-nav" class="">
-        <a href="/" class="w3-blue w3-large w3-tag w3-card-4">ru</a>
-        <a href="/en" class="w3-yellow w3-large w3-tag w3-card-4">en</a>
+    <div id="menubar">
+        <span onmouseenter="w3_open()"><a class="w3-opennav w3-purple w3-xxxlarge
+        w3-badge w3-card-4"><i class="fa fa-bars"></i></a></span>
     </div>
 
 </div>
@@ -52,7 +53,7 @@
 
 
         <!-- LEFT SIDEBAR -->
-        <div id="sidenav" class=" w3-col m2 l2">
+        <div id="sidenav" class=" w3-col m2">
 
             <nav class="w3-sidenav w3-light-grey w3-animate-left w3-closenav"
                  onmouseleave="w3_close()" style="display:none">
@@ -69,7 +70,7 @@
 
 
         <!-- CENTER CONTAINER -->
-        <div id="center-container" class="w3-col m9 l9">
+        <div id="center-container" class="w3-col m9">
 
             <h1 class="hTitle">Hi,</h1>
 
@@ -471,7 +472,7 @@
 
         <!-- RIGHT SIDEBAR -->
 
-        <div class="w3-col m1 l1 w3-padding">
+        <div class="w3-col m1 w3-padding">
             <!--
             <div class="w3-card-8 w3-padding w3-sand">
                 <p>Разместите здесь свою рекламу.</p>

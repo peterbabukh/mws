@@ -79,22 +79,39 @@ body {
 
   & #header {
     position: relative;
+    height: 120px;
 
-    & #logo-container {
-      width: 100px;
-      height: 100px;
-      margin: 5px;
-    }
+    .Adaptive (0; 681px; {
+      height: auto;
+    });
 
     & #logo {
-       width: 100px;
+      height: 100px;
+      margin: 5px;
+
+      .Adaptive (0; 681px; {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 40px;
+        margin: 2px;
+      });
+
     }
 
     & #title {
       text-align: center;
 
+      .Adaptive (0; 681px; {
+        margin-top: 50px;
+      });
+
       & #title-container>span {
         padding: 5px;
+
+        .Adaptive (0; 681px; {
+        font-size: 55px;
+      });
       }
     }
 
@@ -102,14 +119,26 @@ body {
       position: absolute;
       top: 20px;
       right: 20px;
+
+      .Adaptive (0; 681px; {
+        top: 2px;
+        right: 2px;
+      });
+
     }
 
   }
 
   & #menubar {
     position: fixed;
-    left: 70px;
-    top: 15px;
+    left: 20px;
+    top: 140px;
+
+    .Adaptive (0; 681px; {
+      left: 2px;
+      top: 160px;
+    });
+
     & a {
       display: block;
       height: 80px;
@@ -141,10 +170,11 @@ body {
 /* Set a 100% height to left and right col */
 .w3-col.m2 {height: 100%;}
 
-/* On small screens, set grid height to 'auto' *//*
-@media screen and (max-width: 601px) {
-  .w3-row {height:auto;}
-}*/
+.w3-btn {
+  .Adaptive (0; 681px; {
+    white-space: normal;
+  });
+}
 
 .w3-tangerine {
   font-family: "Tangerine", serif;
@@ -153,7 +183,6 @@ body {
 .w3-lobster {
   font-family: "Lobster", serif;
 }
-
 
 .hTitle {
   .w3-lobster;
