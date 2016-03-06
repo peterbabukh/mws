@@ -8,9 +8,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script src="/js/lib/jquery-2.1.4.min.js"></script>
 <script data-main="./js/main.js" src="./js/lib/require-2.1.20.js"></script>
 <!-- <script src="/req/mywebstart.js"></script> -->
-<body>
+
+<body id="start">
 
 <!-- HEADER -->
 <div id="header" class="w3-container w3-teal w3-row">
@@ -48,12 +50,12 @@
 
             <nav class="w3-sidenav w3-light-grey w3-animate-left w3-closenav"
                  onmouseleave="w3_close()" style="display:none">
-                <a href="#start" class="w3-hover-red">В начало</a>
-                <a href="#two-ways" class="w3-hover-yellow">Два пути в программирование</a>
-                <a href="#offer" class="w3-hover-orange">Мое предложение</a>
-                <a href="#plan" class="w3-hover-blue">План действий</a>
-                <a href="#price" class="w3-hover-aqua">Стоимость и условия</a>
-                <a href="#contact" class="w3-hover-green">Как со мной связаться</a>
+                <a data-id="start" class="w3-hover-red">В начало</a>
+                <a data-id="two-ways" class="w3-hover-yellow">Два пути в программирование</a>
+                <a data-id="offer" class="w3-hover-orange">Мое предложение</a>
+                <a data-id="plan" class="w3-hover-blue">План действий</a>
+                <a data-id="price" class="w3-hover-aqua">Стоимость и условия</a>
+                <a data-id="contact" class="w3-hover-green">Как со мной связаться</a>
             </nav>
 
         </div>
@@ -63,7 +65,7 @@
         <!-- CENTER CONTAINER -->
         <div id="center-container" class="w3-col m9 l9">
 
-            <h1 id="start" class="hTitle">Итак,</h1>
+            <h1 class="hTitle">Итак,</h1>
 
             <div class="w3-section w3-justify">
                 меня зовут Петр, в этом (2016) году мне исполнилось 40 лет. Полтора года назад я начал с нуля изучать
@@ -479,7 +481,18 @@
         $(el).next().toggle();
     }
 
+    // smooth animation scroll
+    function scrollSmoothly(e) {
+        e = e || window.e;
+        var target = e.target || e.srcElement;
+        var id = $(target).closest('A').attr('data-id');
+
+        $('html, body').animate({scrollTop:$('#' + id).offset().top}, 500, function () {
+        });
+    }
+
     document.getElementById("center-container").addEventListener('mouseenter', w3_close, false);
+    document.getElementById("sidenav").addEventListener('click', scrollSmoothly, false);
 
 
 
