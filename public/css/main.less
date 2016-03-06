@@ -80,9 +80,14 @@ body {
   & #header {
     position: relative;
 
-    & #logo {
+    & #logo-container {
       width: 100px;
+      height: 100px;
       margin: 5px;
+    }
+
+    & #logo {
+       width: 100px;
     }
 
     & #title {
@@ -91,6 +96,12 @@ body {
       & #title-container>span {
         padding: 5px;
       }
+    }
+
+    & #lang-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
 
   }

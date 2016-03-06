@@ -34,6 +34,8 @@ router.post('/reset/:token', require('./reset').post);
 // page render routes
 router.get('/', require('./home').get);
 router.post('/', require('./home').post);
+router.get('/en', require('./homeEn').get);
+router.post('/en', require('./homeEn').post);
 
 router.get('*', function(req, res){
     res.redirect('/');

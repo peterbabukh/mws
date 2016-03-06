@@ -192,7 +192,8 @@ module.exports = function(grunt) {
             css: {
                 files: [
                     '<%= appConfig.public %>/**/*.less',
-                    'views/**/*.ejs'
+                    'views/**/*.ejs',
+                    'routes/**/*.js'
                 ],
                 tasks: [
                     'css'

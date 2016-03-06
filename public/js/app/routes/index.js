@@ -5,7 +5,8 @@ define( function(require) {
     var Home = require('app/HomeView');
 
     return {
-        '': Home
+        '': Home,
+        'en': Home
     };
 
 });
