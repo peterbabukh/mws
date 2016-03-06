@@ -2,6 +2,7 @@ var config = require('../config');
 var nodemailer = require('nodemailer');
 var mg = require('nodemailer-mailgun-transport');
 var flash = require('express-flash');
+var _ = require('underscore');
 
 
 exports.get = function(req, res) {
@@ -21,11 +22,11 @@ exports.post = function(req, res) {
         }
     };
 
-    var name = req.body.name;
+    var name = _.escape( req.body.name );
     var email = req.body.email;
-    var skype = req.body.skype;
-    var city = req.body.city;
-    var text = req.body.text;
+    var skype = _.escape( req.body.skype );
+    var city = _.escape( req.body.city );
+    var text = _.escape( req.body.text );
 
     var nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
