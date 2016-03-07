@@ -14,6 +14,11 @@
 <!-- <script src="/req/mywebstart.js"></script> -->
 
 <body id="start">
+<!--[if lt IE 10]>
+<div style="color:red;text-align:center">
+    <%= t('text.upgradeYourBrowser') %>
+</div>
+<![endif]-->
 
 <!-- HEADER -->
 <div id="header" class="w3-container w3-teal w3-row">
@@ -72,7 +77,7 @@
         <!-- CENTER CONTAINER -->
         <div id="center-container" class="w3-col m9">
 
-            <h1 class="hTitle">Итак,</h1>
+            <h1 class="hTitle">Привет,</h1>
 
             <div class="w3-section w3-justify">
                 меня зовут Петр, в этом (2016) году мне исполнилось 40 лет. Полтора года назад я начал с нуля изучать
@@ -310,7 +315,7 @@
             </div>
 
             <ul class="w3-section w3-justify">
-                <li>3 месяца у меня ушло на изучение HTML / CSS и отработку верстки статических сайтов.</li>
+                <li>3 месяца у меня ушло на изучение HTML / CSS и отработку верстки статичных сайтов.</li>
                 <br />
                 <li>6 месяцев потребовалось для глубокого освоения чистого JavaScript.</li>
                 <br />
@@ -320,7 +325,7 @@
                 <br />
                 <li>1 месяц я изучал и прикручивал препроцессоры: Grunt, Less, SASS, Jade, Bootstrap.</li>
                 <br />
-                <li>2 месяца у меня ушло на изучение целого Back-end блока, после чего у меня появился свои сервер и база данных:
+                <li>2 месяца у меня ушло на изучение целого Back-end блока, после чего у меня появились свои сервер и база данных:
                 NodeJS, Express, MongoDB, Mongoose и кое что по мелочам.</li>
                 <br />
                 <li>еще месяца 2 я дописывал свое Single-page приложение, прикручивая к нему всякие Back-end фичи,
@@ -329,7 +334,8 @@
 
             <div class="w3-container w3-justify w3-pale-yellow w3-leftbar w3-border-yellow
             w3-padding-large w3-margin-24">
-                <p><i>Свое первое приложение я начал писать через 1 неделю после начала изучения JavaScript.
+                <p><i><a class="w3-pale-blue w3-btn" href="http://peterbabukh.herokuapp.com" target="_blank">Своё первое
+                            приложение</a> я начал писать через 1 неделю после начала изучения JavaScript.
                     Потом по мере изучения я несколько раз его переписывал. Собственно, это приложение и нашло мне работу.</i>
                 </p>
             </div>
